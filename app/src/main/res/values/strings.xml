@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">30Dias_INFOMOVIL</string>
+
+    <string name="nombre1">Myke Towers</string>
+    <string name="nombre2">Jhayco</string>
+    <string name="nombre3">Tainy</string>
+    <string name="nombre4">Bryant Myers</string>
+    <string name="nombre5">Alvaro Diaz</string>
+    <string name="nombre6">Dei V</string>
+    <string name="nombre7">Soge Culebra</string>
+    <string name="nombre8">paopao</string>
+    <string name="nombre9">La Pantera</string>
+    <string name="nombre10">Aleesha</string>
+    <string name="nombre11">Alvama Ice</string>
+    <string name="nombre12">Lucho RK</string>
+    <string name="nombre13">Hard GZ</string>
+    <string name="nombre14">BTRIZ</string>
+    <string name="nombre15">Fabbio</string>
+    <string name="nombre16">JC el Diamante</string>
+    <string name="nombre17">Julieta</string>
+    <string name="nombre18">Rosa Pistola</string>
+    <string name="nombre19">Almacor</string>
+    <string name="nombre20">Bon Calso</string>
+    <string name="nombre21">Selecta</string>
+    <string name="nombre22">GARABATTO</string>
+    <string name="nombre23">C Marí</string>
+    <string name="nombre24">Kabasaki</string>
+    <string name="nombre25">Jose De Las Heras</string>
+    <string name="nombre26">JC Reyes</string>
+    <string name="nombre27">Alex Martini</string>
+    <string name="nombre28">Ballesteros</string>
+    <string name="nombre29">LEÏTI</string>
+    <string name="nombre30">Michenlo</string>
+
+    <string name="descripcionGeneral">Descripcion general para el cantante, inviable hacer una para cada uno</string>
+</resources>

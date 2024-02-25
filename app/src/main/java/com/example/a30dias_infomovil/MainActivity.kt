@@ -5,8 +5,11 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
@@ -15,6 +18,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
@@ -56,6 +60,19 @@ class MainActivity : ComponentActivity() {
 //APP PRINCIPAL
 
 @Composable
+fun AgregaBorde(content: @Composable () -> Unit) {
+    Surface(
+        modifier = Modifier
+            .padding(40.dp)
+            .background(color = Color.White, shape = RoundedCornerShape(4.dp))
+            .shadow(elevation = 12.dp, shape = RectangleShape),
+        border = BorderStroke(2.dp, Color.Black)
+    ) {
+        content()
+    }
+}
+
+@Composable
 fun CantantesApp(){
     Scaffold(
         topBar = {
@@ -66,10 +83,12 @@ fun CantantesApp(){
             contentPadding = it
         ){
             items(cantantes){
-                CantanteItem(
-                    cantante = it,
-                    modifier = Modifier.padding(8.dp)
-                )
+                AgregaBorde {
+                    CantanteItem(
+                        cantante = it,
+                        modifier = Modifier.padding(0.dp)
+                    )
+                }
             }
         }
     }
@@ -89,7 +108,7 @@ fun CantantesTopBar(modifier: Modifier = Modifier){
                     modifier = Modifier
                         .size(64.dp)
                         .padding(8.dp),
-                    painter = painterResource(R.drawable.ic_launcher_foreground),
+                    painter = painterResource(R.drawable.bryant_myers),
                     contentDescription = null
                 )
                 Text(
@@ -108,10 +127,9 @@ fun CantanteItem(
     modifier: Modifier = Modifier
 ){
     Column(
-        modifier = Modifier
-            .aspectRatio(0.8F)
-            .shadow(elevation = 12.dp, shape = RectangleShape)
-            .border(24.dp, color = Color.White, shape = RectangleShape)
+        modifier = modifier,
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Top
     ){
         CantanteDia(cantante.dia)
         CantanteFoto(cantante.imageResourceId)
@@ -127,7 +145,8 @@ fun CantanteDia(
     Text(
         text = diaa,
         style = MaterialTheme.typography.displayMedium,
-        modifier = Modifier.padding(8.dp)
+        modifier = Modifier
+            .padding(8.dp)
             .padding(top = 0.dp)
     )
 }
@@ -139,9 +158,9 @@ fun CantanteFoto(
 ){
     Image(
         modifier = modifier
-            .size(64.dp)
+            .size(280.dp)
             .padding(8.dp)
-            .clip(MaterialTheme.shapes.small),
+            .clip(MaterialTheme.shapes.large),
         contentScale = ContentScale.Crop,
         painter = painterResource(cantanteIcon),
         contentDescription = null
@@ -155,7 +174,9 @@ fun CantanteInfo(
     modifier: Modifier = Modifier
 ){
     Column(
-        modifier = modifier
+        modifier = modifier,
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
     ){
         Text(
             text = stringResource(namee),

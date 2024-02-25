@@ -12,13 +12,13 @@ data class Cantante(
 )
 
 val cantantes = listOf(
-    Cantante("Dia 1", R.drawable.ic_launcher_foreground,R.string.nombre1,R.string.descripcionGeneral),
-    Cantante("Dia 2", R.drawable.ic_launcher_foreground,R.string.nombre2,R.string.descripcionGeneral),
-    Cantante("Dia 3", R.drawable.ic_launcher_foreground,R.string.nombre3,R.string.descripcionGeneral),
-    Cantante("Dia 4", R.drawable.ic_launcher_foreground,R.string.nombre4,R.string.descripcionGeneral),
-    Cantante("Dia 5", R.drawable.ic_launcher_foreground,R.string.nombre5,R.string.descripcionGeneral),
-    Cantante("Dia 6", R.drawable.ic_launcher_foreground,R.string.nombre6,R.string.descripcionGeneral),
-    Cantante("Dia 7", R.drawable.ic_launcher_foreground,R.string.nombre7,R.string.descripcionGeneral),
+    Cantante("Dia 1", R.drawable.myke_towers,R.string.nombre1,R.string.descripcionGeneral),
+    Cantante("Dia 2", R.drawable.jhayco,R.string.nombre2,R.string.descripcionGeneral),
+    Cantante("Dia 3", R.drawable.tainy,R.string.nombre3,R.string.descripcionGeneral),
+    Cantante("Dia 4", R.drawable.bryant_myers,R.string.nombre4,R.string.descripcionGeneral),
+    Cantante("Dia 5", R.drawable.tainy,R.string.nombre5,R.string.descripcionGeneral),
+    Cantante("Dia 6", R.drawable.tainy,R.string.nombre6,R.string.descripcionGeneral),
+    Cantante("Dia 7", R.drawable.tainy,R.string.nombre7,R.string.descripcionGeneral),
     Cantante("Dia 8", R.drawable.ic_launcher_foreground,R.string.nombre8,R.string.descripcionGeneral),
     Cantante("Dia 9", R.drawable.ic_launcher_foreground,R.string.nombre9,R.string.descripcionGeneral),
     Cantante("Dia 10", R.drawable.ic_launcher_foreground,R.string.nombre10,R.string.descripcionGeneral),
